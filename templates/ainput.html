@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <title>Input Form</title>
+    
+
+</head>
+
+<body style="background-color: lightblue;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: blue;">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <a class="navbar-brand" style="margin-left: 20px; font-family:Roboto" href="/ainput">Management System</a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            
+            <li class="nav-item active">
+              <a class="nav-link hover" href="/ainput" style="color: white;">Input Form (current)</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/areport" style="color: white;">Report Form</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard" style="color: white;">Dashboard</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/register" style="color: white;">Add new User</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="/aregister" style="color: white;">Add new Admin</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="/adminlogin" style="color: white;">Log out</a>
+              </li>
+        </div>
+    </nav>
+
+    <div class="container" >
+        <br>
+        <div class="row" style="background-color:white" >   
+            <h1 style="font-family:'Lucida Grande'; text-align: center;font-size: 50pt; color:white ; text-shadow: 4px 4px 8px black; background-color: blue; padding: 1%;">
+              Input Form</h1>         
+        <div class="col-md-12">
+
+        
+        <div class="alert alert-primary"> Fill the following fields</div>
+
+
+        <div class="row">            
+            <div class="col-md-3">
+            </div>              
+            <div class="col-md-4 m-lg-5">
+
+                <form action="/input" method="POST">
+                    
+                            
+                    <div class="form-group ">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Store&nbsp;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <select id="storename" name="storename" class="form-control">
+                                <option value="Select Store Name">Select Store Name</option>
+                                <option value="Modle Store">Modle Store</option>
+                                <option value="Main Store">Main Store</option>
+                                <option value="Town Hall Kabirwala">Town Hall Kabirwala</option>
+                                <option value="Nadra Office Kabirwala">Nadra Office Kabirwala</option>
+                                <option value="Multan Road Kabirwala">Multan Road Kabirwala</option>
+                                <option value="Sarai Sidhu">Sarai Sidhu</option>
+                                <option value="Sardar Pur">Sardar Pur</option>
+                                <option value="Mamdaal">Mamdaal</option>
+                                <option value="Ibrahim Pur">Ibrahim Pur</option>  
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group mt-3 ">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="number" name="date" placeholder="Enter Date" class="form-control" id= "date">
+                        </div>
+                    </div>
+                
+
+                    <div class="form-group  mt-3">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Atta:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="number" placeholder="Enter Atta Amount" name="atta" id= "atta" class="form-control prc">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mt-3">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Sugar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="number" placeholder="Enter Sugar Amount" name="sugar" id= "sugar" class="form-control prc">
+                        </div>
+                    </div>
+                    
+
+                    <div class="form-group mt-3">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Rice:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="number" placeholder="Enter Rice Amount" name="rice" id= "rice" class="form-control prc">
+                        </div>
+                    </div>
+                    
+
+                    <div class="form-group mt-3">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Pulses:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="number" placeholder="Enter Pulses Amount" name="pulses" id= "pulses" class="form-control prc">
+                        </div>
+                    </div>
+                    
+                        
+                    <div class="form-group mt-3">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Sub.&nbsp;Ghee:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="number" placeholder="Enter Sub. Ghee Amount" name="subghee" id= "subghee" class="form-control prc">
+                        </div>
+                    </div>
+                    
+
+                    <div class="form-group mt-3">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>G.Ghee:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="number" placeholder="Enter G. Ghee Amount" name="gghee" id= "gghee" class="form-control prc">
+                        </div>
+                    </div>
+                    
+
+                    <div class="form-group mt-3">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>G.Sale:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="number" placeholder="Enter G. Sale Amount" name="gsale" id= "gsale" class="form-control prc">
+                        </div>
+                    </div>
+                        
+
+                    <div class="form-group mt-3">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Other&nbsp;Amount:&nbsp;</b></label>
+                            <input type="number" placeholder="Enter Other Amount" name="otheramount" id= "otheramount" class="form-control prc">
+                        </div>
+                    </div>
+                    
+
+                    <div class="form-group mt-3">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Total&nbsp;Amount:&nbsp;&nbsp;</b></label>
+                            <input type="number"  id= "totalamount" name="totalamount" class="form-control bg-success text-white" disabled>
+                           
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="submit" class="btn btn-outline-primary" >&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                        <a href="/areport" class="btn btn-outline-success" role="button">&nbsp;&nbsp;&nbsp;View&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    </div>
+                    <br>
+                </form>
+                   
+            </div>
+            <div class="col-md-2 mt-5">
+                <label class="mt-1 ">:سٹور کا نام</label>
+                <br><br>
+                <label  class="mt-1">:تاریخ</label> 
+                <br><br>
+                <label class="mt-2">:آٹا</label> 
+                <br><br>
+                <label class="mt-2">:چینی</label> 
+                <br><br>
+                <label class="mt-2">:چاول</label> 
+                <br><br>
+                <label class="mt-2">:دالیں</label> 
+                <br><br>            
+                <label class="mt-1">:سب گھی</label> 
+                <br><br>
+                <label class="mt-1">:جی گھی</label> 
+                <br><br>
+                <label class="mt-2">:عام فروخت</label> 
+                <br><br>
+                <label class="mt-1">:دوسری رقم</label> 
+                <br><br>
+                <label class="mt-2">:کُل رقم</label>   
+
+            </div>
+    
+        </div>
+
+    </div>
+
+    <footer class="page-footer font-small bg-primary ">
+
+        <div class="footer-copyright text-center py-3" style="color: white;">Developed by:
+            <a style="color: white;" > Saif Ali</a>
+  
+    </footer> 
+
+    <script type="text/javascript"  src="static/jquery.js"></script>
+
+    <script>
+        $('.form-group').on('input','.prc',function(){
+            var totalSum = 0;
+            $('.form-group .prc').each(function(){
+                var inputVal = $(this).val();
+                if($.isNumeric(inputVal)){
+                    totalSum += parseFloat(inputVal);
+                }
+            });
+            $('#totalamount').val(totalSum);
+        });
+    </script>
+    
+</body>
+
+</html>

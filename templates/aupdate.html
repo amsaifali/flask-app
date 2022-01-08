@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <title>Update Form</title>
+
+</head>
+
+<body style="background-color: lightblue;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: blue;">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <a class="navbar-brand" style="margin-left: 20px; font-family:Roboto" href="/ainput">Management System</a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            
+            <li class="nav-item active">
+              <a class="nav-link hover" href="/input" style="color: white;">Input Form</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/report" style="color: white;">Report Form</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard" style="color: white;">Dashboard</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/register" style="color: white;">Add new User</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="/aregister" style="color: white;">Add new Admin</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="/adminlogin" style="color: white;">Log out</a>
+              </li>
+          
+        </div>
+    </nav>
+
+    <div class="container" >
+        <br>
+        <div class="row" style="background-color:white" >   
+            <h1 style="font-family:'Lucida Grande'; text-align: center;font-size: 50pt; color:white ; text-shadow: 4px 4px 8px black; background-color: blue; padding: 1%;">
+              Update Form</h1>         
+            <div class="col-md-12">
+        
+        <div class="alert alert-primary"> Update the following fields.</div>
+
+
+        <div class="row">            
+            <div class="col-md-4">
+            </div>              
+            <div class="col-md-4">
+
+                <form action="/update/{{data.sno}}" method="POST">
+
+                    <div class="form-group">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Store&nbsp;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <select id="storename" name="storename" class="form-control">
+                                <option value={{data.storename}}>{{data.storename}}</option>
+                                <option value="Modle Store">Modle Store</option>
+                                <option value="Main Store">Main Store</option>
+                                <option value="Town Hall Kabirwala">Town Hall Kabirwala</option>
+                                <option value="Nadra Office Kabirwala">Nadra Office Kabirwala</option>
+                                <option value="Multan Road Kabirwala">Multan Road Kabirwala</option>
+                                <option value="Sarai Sidhu">Sarai Sidhu</option>
+                                <option value="Sardar Pur">Sardar Pur</option>
+                                <option value="Mamdaal">Mamdaal</option>
+                                <option value="Ibrahim Pur">Ibrahim Pur</option>  
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="date" name="date" placeholder="Enter Date" class="form-control" id= "date"value={{data.date}}>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Atta:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="text" placeholder="Enter Atta Amount" name="atta" id= "atta" class="form-control" value={{data.atta}}>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Sugar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="text" placeholder="Enter Sugar Amount" name="sugar" id= "sugar" class="form-control" value={{data.sugar}}>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Rice:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="text" placeholder="Enter Rice Amount" name="rice" id= "rice" class="form-control" value={{data.rice}}>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Pulses:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="text" placeholder="Enter Pluces Amount" name="pulses" id= "pulses" class="form-control" value={{data.pluces}}>
+                        </div>
+                    </div>
+                    <br>
+                        
+                    <div class="form-group">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Sub.&nbsp;Ghee:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="text" placeholder="Enter Sub. Ghee Amount" name="subghee" id= "subghee" class="form-control" value={{data.subghee}}>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>G.Ghee:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="text" placeholder="Enter G. Ghee Amount" name="gghee" id= "gghee" class="form-control" value={{data.gghee}}>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>G.Sale:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="text" placeholder="Enter G. Sale Amount" name="gsale" id= "gsale" class="form-control" value={{data.gsale}}>
+                        </div>
+                    </div>
+                    <br>    
+
+                    <div class="form-group">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Other&nbsp;Amount:&nbsp;</b></label>
+                            <input type="text" placeholder="Enter Other Amount" name="otheramount" id= "otheramount" class="form-control" value={{data.otheramount}}>
+                        </div>
+                    </div>
+                    <br>    
+
+                    <div class="form-group">
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label><b>Total&nbsp;Amount:&nbsp;&nbsp;</b></label>
+                            <input type="text" name="totalamount" id= "totalamount" class="form-control" value={{data.totalamount}}>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="submit" class="btn btn-outline-primary" >&nbsp;&nbsp;&nbsp;&nbsp;Update&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                </form>
+                   
+            </div>
+              
+        </div>
+    <br>
+    </div>
+    <footer class="page-footer font-small bg-primary ">
+
+        <div class="footer-copyright text-center py-3" style="color: white;">Developed by:
+            <a style="color: white;" > Saif Ali</a>
+  
+    </footer>  
+    
+</body>
+
+</html>
